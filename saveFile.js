@@ -2,6 +2,7 @@ var http = require('http');
 var formidable = require('formidable');
 
 http.createServer(function (req, res) {
+    console.log('1');
   if (req.url == '/fileupload') {
     var form = new formidable.IncomingForm();
     form.parse(req, function (err, fields, files) {
@@ -16,4 +17,8 @@ http.createServer(function (req, res) {
     res.write('</form>');
     return res.end();
   }
-}).listen(8080);
+}).listen(7070);
+
+
+
+
